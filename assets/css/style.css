@@ -43,13 +43,14 @@
     padding-top: 0.5rem;
 }
 
-#citys li {
+#cities li {
     list-style: none;
     text-align: center;
     font-size: 1.5rem;
     font: black;
     background-color: lightgray;
     border-radius: 5px;
+    margin: 0.3rem auto;
 }
 
 #dashboard {
