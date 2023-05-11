@@ -12,7 +12,7 @@
 
 #main {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 #side-bar {
@@ -60,18 +60,26 @@
 #current {
     height: 45%;
     margin: 1rem auto;
+    border: 0.1rem solid #323D4F;
 }
 
-#city {
+#current .date {
     font-size: 2.5rem;
-    margin: 0.5rem;
+    font-weight: bold;
+    margin-left: 1rem;
+    display: inline-block;
 }
 
-.temp,
-.wind,
-.humidity {
+.weather-icon {
+    height: 4rem;
+}
+
+#current .temp,
+#current .wind,
+#current .humidity {
     font-size: 1.5rem;
-    margin: 0.5rem;
+    font-weight: bold;
+    margin: 1rem;
 }
 
 #five-day  {
@@ -86,14 +94,13 @@
 
 #cards {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     min-height: 80%;
-    margin-right: 10%;
 }
 
 .card {
+    padding-left: 1rem;
     background-color: #323D4F;
     width: 16%;
-    min-height: 100%;
     color: white;
 }
