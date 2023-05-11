@@ -8,17 +8,14 @@
     line-height: 1.5;
     color: white;
     text-align: center;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
 }
 
 #main {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
-#place {
-    background-color: aqua;
+#side-bar {
     min-width: 20vw;
     min-height: 60vh;
     font-size: 2rem;
@@ -28,6 +25,7 @@
     font-weight: bold;
     display: flex;
     flex-direction: column;
+    margin: 1rem auto;
 }
 
 #search-bar p,
@@ -51,21 +49,21 @@
     background-color: lightgray;
     border-radius: 5px;
     margin: 0.3rem auto;
+    cursor: pointer;
 }
 
 #dashboard {
     min-width: 76vw;
-    min-height: 60vh;
+    min-height: 70vh;
 }
 
 #current {
-    min-height: 45%;
-    background-color: aqua;
+    height: 45%;
+    margin: 1rem auto;
 }
 
 #city {
     font-size: 2.5rem;
-    font-weight: bold;
     margin: 0.5rem;
 }
 
@@ -73,11 +71,29 @@
 .wind,
 .humidity {
     font-size: 1.5rem;
-    font-weight: bold;
     margin: 0.5rem;
 }
 
 #five-day  {
-    min-height: 55%;
-    background-color: aquamarine;
+    height: 55%;
+    font-weight: bold;
+}
+
+#five-day p {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+#cards {
+    display: flex;
+    justify-content: space-around;
+    min-height: 80%;
+    margin-right: 10%;
+}
+
+.card {
+    background-color: #323D4F;
+    width: 16%;
+    min-height: 100%;
+    color: white;
 }
