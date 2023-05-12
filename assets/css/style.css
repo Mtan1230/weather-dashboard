@@ -103,8 +103,8 @@
 }
 
 .card {
-    padding-left: 1rem;
+    padding: 0 0.5rem;
     background-color: #323D4F;
-    width: 16%;
+    width: 18%;
     color: white;
 }
