@@ -35,14 +35,14 @@ function display(w) {
     }
     //display current weather
     date[0].textContent = w.today.name + ' (' + w.today.date + ') ';
-    icon[0].src = `http://openweathermap.org/img/w/${w.today.icon}.png`;
+    icon[0].src = `https://openweathermap.org/img/w/${w.today.icon}.png`;
     temp[0].textContent = 'Temp: ' + w.today.temp;
     wind[0].textContent = 'Wind: ' + w.today.wind;
     humidity[0].textContent = 'Humidity: ' + w.today.humidity;
     //display 5-day weather
     for (let i = 1; i < 6; i++) {
         date[i].textContent = w['day-' + i].date;
-        icon[i].src = `http://openweathermap.org/img/w/${w['day-' + i].icon}.png`;
+        icon[i].src = `https://openweathermap.org/img/w/${w['day-' + i].icon}.png`;
         temp[i].textContent = 'Temp: ' + w['day-' + i].temp;
         wind[i].textContent = 'Wind: ' + w['day-' + i].wind;
         humidity[i].textContent = 'Humidity: ' + w['day-' + i].humidity;
@@ -105,7 +105,7 @@ async function getWeather(lat, lon) {
 //function to get lat&lon of the input city name
 async function getGeo(city, callback) {
     const key = 'a0af9f546396a2dca8ce456ef5c97485';
-    const url = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${key}`;
+    const url = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${key}`;
     await fetch(url)
         .then(res => {
             if (res.status === 404) {
