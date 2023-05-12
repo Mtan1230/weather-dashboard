@@ -8,7 +8,20 @@ const wind = document.getElementsByClassName('wind');
 const humidity = document.getElementsByClassName('humidity');
 const cards = document.getElementsByClassName('card');
 const redirectUrl = './404.html';
-const history = [];
+let history = [];
+
+function loadStorage() {
+    const saveHistory = JSON.parse(localStorage.getItem("search history"));
+    if (saveHistory) {
+        history = saveHistory;
+        history.forEach(element => {
+            const cityName = document.createElement('li');
+            cityName.textContent = element;
+            cities.appendChild(cityName);
+        });
+    }
+}
+loadStorage();
 
 function display(w) {
     //set list and local storage
@@ -111,7 +124,6 @@ async function getGeo(city, callback) {
         });
 }
 
-//
 btn.addEventListener('click', () => {
     const cityInput = input[0].value;
     if (cityInput) {
@@ -119,3 +131,8 @@ btn.addEventListener('click', () => {
     }
 })
 
+cities.addEventListener('click', (e) => {
+    if (e.target.tagName === 'LI') {
+        getGeo(e.target.textContent, getWeather);
+    }
+})
