@@ -70,16 +70,20 @@
     display: inline-block;
 }
 
-.weather-icon {
-    height: 4rem;
-}
-
 #current .temp,
 #current .wind,
 #current .humidity {
     font-size: 1.5rem;
     font-weight: bold;
     margin: 1rem;
+}
+
+#current .weather-icon {
+    height: 4.5rem;
+}
+
+.weather-icon {
+    height: 3rem;
 }
 
 #five-day  {

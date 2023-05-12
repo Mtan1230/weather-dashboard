@@ -6,7 +6,7 @@ const icon = document.getElementsByClassName('weather-icon');
 const temp = document.getElementsByClassName('temp');
 const wind = document.getElementsByClassName('wind');
 const humidity = document.getElementsByClassName('humidity');
-const cards = document.getElementsByClassName('card');
+
 const redirectUrl = './404.html';
 let history = [];
 
@@ -23,13 +23,14 @@ function loadStorage() {
 }
 loadStorage();
 
+//handle weather data
 function display(w) {
     //set list and local storage
     if (!history.includes(w.today.name)) {
-        history.push(w.today.name);
         const cityName = document.createElement('li');
         cityName.textContent = w.today.name;
         cities.appendChild(cityName);
+        history.push(w.today.name);
         localStorage.setItem("search history", JSON.stringify(history));
     }
     //display current weather
